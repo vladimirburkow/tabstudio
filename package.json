@@ -1,0 +1,24 @@
+{
+  "name": "tabstudio",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Tab Studio (AI Guitar Tab Studio): сайт, десктоп (Tauri), iOS/Android (Capacitor) из одного кода",
+  "type": "module",
+  "scripts": {
+    "build:web": "node scripts/build-app.mjs web",
+    "serve:web": "npm run build:web && npx --yes http-server platforms/web/dist -p 8080 -c-1",
+    "build:desktop": "node scripts/build-app.mjs desktop && cd platforms/desktop && npm run tauri build",
+    "dev:desktop": "node scripts/build-app.mjs desktop && cd platforms/desktop && npm run tauri dev",
+    "build:mobile": "node scripts/build-app.mjs mobile && cd platforms/mobile && npx cap sync",
+    "ios": "npm run build:mobile && cd platforms/mobile && npx cap open ios",
+    "android": "npm run build:mobile && cd platforms/mobile && npx cap open android"
+  },
+  "dependencies": {
+    "@coderline/alphatab": "1.6.3",
+    "@fontsource/ibm-plex-sans": "5.2.8",
+    "@fontsource/jetbrains-mono": "5.2.8",
+    "@fontsource/unbounded": "5.2.8",
+    "@supabase/supabase-js": "2.118.0",
+    "jspdf": "2.5.1"
+  }
+}

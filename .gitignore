@@ -1,0 +1,11 @@
+node_modules/
+platforms/web/dist/
+platforms/desktop/dist/
+platforms/desktop/src-tauri/target/
+platforms/desktop/src-tauri/gen/
+platforms/mobile/www/
+platforms/mobile/ios/App/App/public/
+platforms/mobile/android/app/src/main/assets/public/
+platforms/mobile/android/.gradle/
+platforms/mobile/android/app/build/
+.DS_Store

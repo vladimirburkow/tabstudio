@@ -1,0 +1,25 @@
+# Публикация сайта на GitHub Pages при пуше в main (Settings → Pages → Source: GitHub Actions).
+# Для своего сервера или Netlify/Vercel просто загрузите папку platforms/web/dist после `npm run build:web`.
+name: Website
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['app/**', 'config/**', 'platforms/web/**', 'scripts/**']
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: '${{ steps.d.outputs.page_url }}' }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm ci && node scripts/build-app.mjs web
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: platforms/web/dist }
+      - id: d
+        uses: actions/deploy-pages@v4

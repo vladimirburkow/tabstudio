@@ -1,0 +1,17 @@
+{
+  "name": "Tab Studio — табы и аккорды из записи",
+  "short_name": "Tab Studio",
+  "description": "Табулатуры, аккорды и ноты из записи гитары. Редактор табов, квинтовый круг, гаммы, генератор прогрессий.",
+  "lang": "ru",
+  "start_url": "./#home",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#121419",
+  "theme_color": "#121419",
+  "categories": ["music", "education"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Tab Studio</string>
+    <string name="title_activity_main">Tab Studio</string>
+    <string name="package_name">app.tabstudio.guitar</string>
+    <string name="custom_url_scheme">app.tabstudio.guitar</string>
+    <!-- ТЕСТОВЫЙ ID приложения AdMob для Android. Замените на свой. -->
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+</resources>

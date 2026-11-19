@@ -1,0 +1,12 @@
+{
+  "appId": "app.tabstudio.guitar",
+  "appName": "Tab Studio",
+  "webDir": "www",
+  "backgroundColor": "#121419",
+  "ios": { "contentInset": "never", "backgroundColor": "#121419", "scheme": "Tab Studio" },
+  "android": { "backgroundColor": "#121419" },
+  "plugins": {
+    "SplashScreen": { "launchAutoHide": false, "backgroundColor": "#121419", "showSpinner": false },
+    "StatusBar": { "style": "DARK", "overlaysWebView": true }
+  }
+}
